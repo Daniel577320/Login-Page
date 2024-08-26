@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="blue-bar"></div>
+
+    <div class="form">
+        <h1 style="color: rgb(5, 173, 234);">Basic details</h1>
+        <hr>
+        <div class="legend-pair">
+            <fieldset>
+                <legend class="legends">First Name</legend>
+                <input type="text" id="fname" class="names" oninput="letters(this, 'fname')" required>
+                <span id="fnameError"></span>
+            </fieldset>
+            
+            <fieldset class="right">
+                <legend class="legends">Last Name</legend>
+                <input type="text" id="lname" class="names" oninput="letters(this, 'lname')" required>
+                <span id="lnameError"></span>
+            </fieldset>
+        </div>
+        <div class="legend-pair">
+            <fieldset>
+                <legend class="legends">Email ID</legend>
+                <input type="text" name="email" id="email" oninput="cstring(this)" required>
+                <span id="emailError"></span>
+            </fieldset>
+        
+            <fieldset class="right">
+                <legend class="legends">Your user ID</legend>
+                <input type="text" id="userid" oninput="cstring(this)" required>
+                <span id="IdError"></span>
+            </fieldset>
+        </div>
+        <div class="legend-pair">
+            <fieldset>
+                <legend class="legends">Country</legend>
+                <select name="country" id = "country" onchange="ChooseState()" required>
+                    <option>Select a country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="South Africa">South Africa</option>
+                </select>
+                <span id="countryError"></span>
+            </fieldset>
+            
+           <fieldset>
+                <legend class="legends">State</legend>
+                <select name="state" id="state" onchange="ChooseCity()" required>
+                    <option value="">Select State</option>
+                </select>
+                <span id="stateError"></span>
+            </fieldset>
+            
+            <fieldset>
+                <legend class="legends">City</legend>
+                <select name="city" id="city" required>
+                    <option value="">Select City</option>
+                </select>
+                <span id="cityError"></span>
+            </fieldset>
+        </div>
+        <br>
+        <div class="legend-pair">
+            <fieldset>
+                <legend class="legends">Phone Number</legend>
+                <input type="text" name="phone" id="phone" oninput="otherstyles(this)" required>
+                <span id="phoneError"></span>
+            </fieldset>
+            
+            <fieldset class="right">
+                <br>
+                <input type="text" name="reference" id="reference" placeholder="Reference Code" oninput="otherstyles(this)" required>
+                <span id="referenceError"></span>
+            </fieldset>
+            
+        </div>
+        
+    
+        <hr>
+    
+        <div class = "buttonSpace">
+            <a href="#" class="resetlink" onclick="resetdata()">Reset</a>
+            <button class="continue" type="submit" onclick="validate()">Continue</button>
+        </div>
+        
+        
+    </div>
+
+    
+    <script src="script.js"></script>
+    
+    <div id="display"></div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+button{background-color: rgb(47, 101, 226);
+width: 100px;
+color: white;
+height: 30px;
+padding: auto;
+border-radius: 20px;
+border-color: dimgrey;}
+
+.blue-bar {
+    position:fixed;
+    left:0;
+    top: 0;
+    height: 50%; 
+    width: 8%; 
+    background-color: rgb(5, 173, 234);
+}
+
+.form {
+    position:absolute;
+    top: 0;
+    left: 150px;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.legend-pair{
+    display: flex;
+    align-items: center;
+}
+
+fieldset {
+    border: none;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width: 150%;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.legends {
+    font-weight:lighter;
+    color: rgb(110, 105, 105);
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+.valid-input {
+    border-bottom: 2px solid rgb(25, 205, 46);
+}
+
+.invalid-input {
+    border-bottom: 2px solid red;
+}
+
+.right{
+    padding-left: 110px;
+}
+
+input:focus {
+    border-color: rgb(50, 50, 170);
+}
+
+.legends.blue {
+    color:blue;
+}
+
+.valid-userinput {
+    border-bottom: 2px solid rgb(121, 137, 18);
+}
+.valid-userinput::after{
+    content: "\1F512"; /* Unicode character for the lock icon */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: green;
+}
+
+.invalid-userinput {
+    border-bottom: 2px solid red;
+}
+
+.resetlink{
+    color:rgb(64, 59, 59);
+    display: flex;
+}
+
+.invalid-dropdowninput{
+    border-color: red;
+}
+
+.continue{
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
+
+.buttonSpace{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
